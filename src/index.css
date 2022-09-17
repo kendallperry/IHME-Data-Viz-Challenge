@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  font-family: 'Courier New', Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0em;
+  padding: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top-country-slider {
+  display: flex;
+  margin: 0.5em
+}
+
+.citation {
+  border: 1px solid black;
+  padding: 2%;
+  margin: 4%;
+}
+
+.controls {
+  margin: 0.5em
+}
+
+.viz-data {
+  display: flex;
+} 
