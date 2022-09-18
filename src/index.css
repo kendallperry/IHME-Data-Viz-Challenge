@@ -1,6 +1,7 @@
 body {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   /* align-items: center; */
   font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
@@ -13,11 +14,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.app {
+/* .app {
   display: flex;
   flex-direction: row;
-  align-items: center;
-}
+  /* align-items: center; */
+/* } 
+*/ */
 
 .top-country-slider {
   display: flex;
@@ -34,6 +36,10 @@ code {
   margin: 0.5em
 }
 
-.viz-data {
+.viz {
   display: flex;
 } 
+
+.title {
+  justify-content: center;
+}

@@ -21,9 +21,9 @@ export default function Viz({ data }) {
 
       for (let i = topNumber - 1; i >= 0; i--) {
         let country = `${data[i].location_name} ${i + 1}`;
-        if (country.length > 23) {
+        if (country.length > 12 && topNumber <= 15) {
           let end = country.slice(-2)
-          country = `${country.slice(0, 21)}..${end}`
+          country = `${country.slice(0, 11)}..${end}`
         }
         let mean = data[i].mean;
         let displayObj = { x: country, y: mean };
@@ -36,16 +36,17 @@ export default function Viz({ data }) {
   return (
     <div className='viz'>
      <TopCountriesControl topNumber={topNumber} setTopNumber={setTopNumber} />
-     <h4>Mean amount of people per 100,000</h4>
+     <h4 className="title">Mean amount of people per 100,000</h4>
       <VictoryChart horizontal 
         theme={VictoryTheme.material} 
         domainPadding={8.5}
+        title="Mean amount of people per 100,000"
         >
         <VictoryAxis
           style={{
             axis: { strokeWidth: 0 },
             grid: { stroke: "none" },
-            tickLabels: { fontSize: 4, padding: 0.5, margin: 10, stroke: "#", angle: 0 },
+            tickLabels: { fontSize: topNumber > 15 ?  4.3 : 6, padding: 0.5, margin: 10, stroke: "#", angle: 0 },
           }}
         />
         <VictoryAxis dependentAxis orientation="top" />
