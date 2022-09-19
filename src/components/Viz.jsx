@@ -1,9 +1,4 @@
-import {
-  VictoryChart,
-  VictoryBar,
-  VictoryTheme,
-  VictoryAxis,
-} from "victory";
+import { VictoryChart, VictoryBar, VictoryTheme, VictoryAxis } from "victory";
 import { useEffect, useState } from "react";
 import TopCountriesControl from "./TopCountriesControl";
 import ControlPanel from "./ControlPanel";
@@ -11,6 +6,7 @@ import ControlPanel from "./ControlPanel";
 export default function Viz() {
   const [vizData, setVizData] = useState([]);
   const [topNumber, setTopNumber] = useState(20);
+  const [viewNums, setViewNums] = useState(false);
 
   const [data, setData] = useState({});
   const updateData = (newData) => setData(newData);
@@ -41,6 +37,9 @@ export default function Viz() {
           topNumber={topNumber}
           setTopNumber={setTopNumber}
         />
+        <button onClick={() => setViewNums(!viewNums)}>
+          Display Mean Amounts
+        </button>
       </div>
 
       <div className="viz">
@@ -58,25 +57,42 @@ export default function Viz() {
               axis: { strokeWidth: 0 },
               grid: { stroke: "none" },
               tickLabels: {
-                fontSize: topNumber > 15 ? topNumber > 35 ? 4 : 4.3 : 6,
+                fontSize: topNumber > 15 ? (topNumber > 35 ? 4 : 4.3) : 6,
                 padding: 0.9,
               },
             }}
           />
-          <VictoryAxis dependentAxis 
+          <VictoryAxis
+            dependentAxis
             orientation="top"
             label="Mean number of deaths per 100,000 people"
-            style={{ 
+            style={{
               axisLabel: { fontSize: 9, padding: 20 },
-              tickLabels: { fontSize: 6, padding: 5 }
-            }} />
-          <VictoryBar
-            theme={VictoryTheme.material}
-            data={vizData}
-            style={{ data: { fill: "#0095A8" } }}
+              tickLabels: { fontSize: 6, padding: 5 },
+            }}
           />
+          {viewNums ? (
+            <VictoryBar
+              theme={VictoryTheme.material}
+              data={vizData}
+              labels={({ datum }) => `${datum.y.toFixed(2)}`}
+              style={{
+                data: { fill: "#0095A8" },
+                labels: { fontSize: 5, padding: 3 },
+              }}
+            />
+          ) : (
+            <VictoryBar
+              theme={VictoryTheme.material}
+              data={vizData}
+              style={{ data: { fill: "#0095A8" } }}
+            />
+          )}
         </VictoryChart>
       </div>
     </>
   );
 }
+
+// labels: { fontSize: 5, padding: 3 }}}
+// labels={({ datum }) => `${datum.y.toFixed(2)}`}
