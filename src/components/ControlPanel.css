@@ -1,12 +1,14 @@
 .control-panel {
-  border: solid 1px #777;
+  border: solid 1px gray;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   flex-basis: fit-content;
   align-items: center;
+  justify-content: space-evenly;
   margin: 8px;
-  width: 20em;
+  padding: 1px;
+  width: 22em;
 }
 
 .control {

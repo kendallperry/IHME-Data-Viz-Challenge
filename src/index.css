@@ -2,11 +2,12 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0em;
+  margin: 2%;
   padding: 10px;
+  border: 1px solid gray;
 }
 
 code {
@@ -25,7 +26,7 @@ code {
 }
 
 .controls {
-  margin: 0.5em;
+  margin: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,16 +42,36 @@ code {
 #header {
   display: flex;
   justify-content: center;
-  margin-bottom: -1%;
-  margin-top: 2%;
+  padding: 10px;
+  font-weight: 300;
 }
 
-@media screen and (max-width: 1000px) {
+#tag {
+  display: flex;
+  justify-content: center;
+  font-size: smaller;
+  font-style: italic;
+}
+
+@media screen and (max-width: 1200px) {
   .App {
     flex-direction: column;
     align-items: center;
   }
   .controls {
     margin-top: 20px;
+    flex-direction: row;
+  }
+  .viz {
+    margin-top: -6%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .controls {
+    flex-direction: column;
+  }
+   #header {
+    font-size: 110%;
   }
 }

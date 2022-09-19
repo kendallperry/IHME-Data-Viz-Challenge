@@ -13,6 +13,7 @@ export default function App() {
       <Viz className='viz-data' />
     </div>
     <Citation />
+    <p id="tag">IHME Data Viz Coding Challenge by Kendall Perry</p>
     </>
   );
 }

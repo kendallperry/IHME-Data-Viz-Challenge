@@ -74,14 +74,14 @@ export default function Viz() {
           <VictoryBar
             theme={VictoryTheme.material}
             data={vizData}
-            style={{ data: { fill: "#046b99" } }}
-            labelComponent={
-              <VictoryLabel
-                angle={0}
-                verticalAnchor="middle"
-                textAnchor="end"
-              />
-            }
+            style={{ data: { fill: "#0095A8" } }}
+            events={[{
+              target: "data",
+              eventHandlers: {
+                onClick: (data) => {
+                  console.log("Clicked!", data)
+                }}
+            }]}
           />
         </VictoryChart>
       </div>

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const options = [
   { value: 'Females', label: 'Females' },
   { value: 'Males', label: 'Males' },
-  { value: 'Both sexes', label: 'Both sexes' },
+  { value: 'Both sexes', label: 'All sexes' },
 ];
 
 export default function SexControl({ onChange, value }) {
