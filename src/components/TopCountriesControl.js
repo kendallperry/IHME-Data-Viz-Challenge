@@ -3,7 +3,7 @@ export default function TopCountriesControl({ topNumber, setTopNumber }) {
   return (
     <div className='control-panel'>
       <p>Set Top Countries</p>
-      <div className="top-country-slider">
+      <div className="control">
         <input
           type="range"
           min={5}
