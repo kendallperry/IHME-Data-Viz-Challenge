@@ -1,9 +1,8 @@
-
 export default function TopCountriesControl({ topNumber, setTopNumber }) {
   return (
-    <div className='control-panel'>
+    <div className="control-panel">
       <div className="control">
-      <p>Set Top Countries</p>
+        <p>Set Top Countries</p>
         <input
           type="range"
           min={5}

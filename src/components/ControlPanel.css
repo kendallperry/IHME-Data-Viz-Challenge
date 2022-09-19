@@ -3,12 +3,13 @@
   border-radius: 3px;
   display: flex;
   flex-direction: column;
-  flex-basis: fit-content;
+  flex-basis: auto; 
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 8px;
   padding: 1px;
   width: 22em;
+  font-size: 14px;
 }
 
 .control {

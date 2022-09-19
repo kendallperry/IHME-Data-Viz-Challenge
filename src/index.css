@@ -20,7 +20,7 @@ code {
 } 
 
 .citation {
-  border: 1px solid black;
+  border: 1px dotted gray;
   padding: 2%;
   margin: 4%;
 }

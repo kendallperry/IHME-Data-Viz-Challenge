@@ -3,7 +3,6 @@ import {
   VictoryBar,
   VictoryTheme,
   VictoryAxis,
-  VictoryLabel,
 } from "victory";
 import { useEffect, useState } from "react";
 import TopCountriesControl from "./TopCountriesControl";
@@ -52,7 +51,7 @@ export default function Viz() {
             ticks: { fill: 1 },
           }}
           domainPadding={8.5}
-          title="Mean amount of people per 100,000"
+          title="Mean number of deaths per 100,000 people"
         >
           <VictoryAxis
             style={{
@@ -66,7 +65,7 @@ export default function Viz() {
           />
           <VictoryAxis dependentAxis 
             orientation="top"
-            label="Mean amount of people per 100,000"
+            label="Mean number of deaths per 100,000 people"
             style={{ 
               axisLabel: { fontSize: 9, padding: 20 },
               tickLabels: { fontSize: 6, padding: 5 }
@@ -75,13 +74,6 @@ export default function Viz() {
             theme={VictoryTheme.material}
             data={vizData}
             style={{ data: { fill: "#0095A8" } }}
-            events={[{
-              target: "data",
-              eventHandlers: {
-                onClick: (data) => {
-                  console.log("Clicked!", data)
-                }}
-            }]}
           />
         </VictoryChart>
       </div>
