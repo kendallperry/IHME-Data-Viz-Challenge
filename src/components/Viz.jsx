@@ -34,11 +34,16 @@ export default function Viz({ data }) {
   }, [data, topNumber]);
 
   return (
+    <>
+    <TopCountriesControl topNumber={topNumber} setTopNumber={setTopNumber} className='controls' />
+
     <div className='viz'>
-     <TopCountriesControl topNumber={topNumber} setTopNumber={setTopNumber} />
      <h4 className="title">Mean amount of people per 100,000</h4>
       <VictoryChart horizontal 
-        theme={VictoryTheme.material} 
+        style={{
+          tickLabels: { fontSize: 4 },
+          ticks: { fill: 1 }
+        }}
         domainPadding={8.5}
         title="Mean amount of people per 100,000"
         >
@@ -60,5 +65,6 @@ export default function Viz({ data }) {
         />
       </VictoryChart>
     </div>
+    </>
   );
 }
