@@ -17,7 +17,6 @@ code {
 .App {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
  } 
 
 
@@ -35,13 +34,14 @@ code {
 .controls {
   margin: 0.5em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .viz {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
 } 
 
 .title {

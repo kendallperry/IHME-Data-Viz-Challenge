@@ -1,4 +1,4 @@
-// import "./Viz.css";
+
 import {
   VictoryChart,
   VictoryBar,
@@ -8,12 +8,15 @@ import {
 } from "victory";
 import { useEffect, useState } from "react";
 import TopCountriesControl from "./TopCountriesControl";
+import ControlPanel from "./ControlPanel";
 
-export default function Viz({ data }) {
+export default function Viz() {
   const [vizData, setVizData] = useState([]);
   const [topNumber, setTopNumber] = useState(25);
 
-  // const fakeData = [{x: "US", y: 10}, {x: "Canada", y:7}, {x: "France", y: 3}]
+  const [data, setData] = useState({});
+  const updateData = (newData) => setData(newData);
+
 
   useEffect(() => {
     if (data.length) {
@@ -35,7 +38,10 @@ export default function Viz({ data }) {
 
   return (
     <>
-    <TopCountriesControl topNumber={topNumber} setTopNumber={setTopNumber} className='controls' />
+    <div className='controls'>
+      <ControlPanel updateData={updateData}  />
+      <TopCountriesControl topNumber={topNumber} setTopNumber={setTopNumber} />
+    </div>
 
     <div className='viz'>
      <h4 className="title">Mean amount of people per 100,000</h4>

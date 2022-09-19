@@ -3,6 +3,7 @@
   border-radius: 3px;
   display: flex;
   flex-direction: column;
+  flex-basis: fit-content;
   margin: 8px;
   width: 20em;
 }
