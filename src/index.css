@@ -38,12 +38,6 @@ code {
   width: 100%;
 } 
 
-.title {
-  display: flex;
-  justify-content: center;
-  /* margin: 10px; */
-}
-
 #header {
   display: flex;
   justify-content: center;
@@ -51,15 +45,12 @@ code {
   margin-top: 2%;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   .App {
     flex-direction: column;
     align-items: center;
   }
-}
-
-/* @media screen and (max-width: 700px) {
   .controls {
-    flex-direction: 
+    margin-top: 20px;
   }
-} */
+}

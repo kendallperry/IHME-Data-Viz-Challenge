@@ -37,7 +37,6 @@ export default function Viz() {
   return (
     <>
       <div className="controls">
-        <h4 className="title">Mean amount per 100,000 people</h4>
         <ControlPanel updateData={updateData} />
         <TopCountriesControl
           topNumber={topNumber}
@@ -61,10 +60,7 @@ export default function Viz() {
               grid: { stroke: "none" },
               tickLabels: {
                 fontSize: topNumber > 15 ? topNumber > 35 ? 4 : 4.3 : 6,
-                padding: 0.5,
-                margin: 10,
-                stroke: "#",
-                angle: 0,
+                padding: 0.9,
               },
             }}
           />
