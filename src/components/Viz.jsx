@@ -22,9 +22,9 @@ export default function Viz() {
 
       for (let i = topNumber - 1; i >= 0; i--) {
         let country = `${data[i].location_name} ${i + 1}`;
-        if (country.length > 12 && topNumber <= 15) {
+        if (country.length > 18 && topNumber <= 15) {
           let end = country.slice(-2);
-          country = `${country.slice(0, 11)}..${end}`;
+          country = `${country.slice(0, 16)}..${end}`;
         }
         let mean = data[i].mean;
         let displayObj = { x: country, y: mean };
@@ -60,7 +60,7 @@ export default function Viz() {
               axis: { strokeWidth: 0 },
               grid: { stroke: "none" },
               tickLabels: {
-                fontSize: topNumber > 15 ? 4.3 : 6,
+                fontSize: topNumber > 15 ? topNumber > 35 ? 4 : 4.3 : 6,
                 padding: 0.5,
                 margin: 10,
                 stroke: "#",
@@ -68,7 +68,13 @@ export default function Viz() {
               },
             }}
           />
-          <VictoryAxis dependentAxis orientation="top" />
+          <VictoryAxis dependentAxis 
+            orientation="top"
+            label="Mean amount of people per 100,000"
+            style={{ 
+              axisLabel: { fontSize: 9, padding: 20 },
+              tickLabels: { fontSize: 6, padding: 5 }
+            }} />
           <VictoryBar
             theme={VictoryTheme.material}
             data={vizData}
