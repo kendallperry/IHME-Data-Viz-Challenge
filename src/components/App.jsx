@@ -8,9 +8,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <div className="App">
-        <Viz className="viz-data" />
-      </div>
+      <Viz />
       <Citation />
       <Footer />
     </>

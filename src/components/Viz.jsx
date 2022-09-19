@@ -30,17 +30,20 @@ export default function Viz() {
   }, [data, topNumber]);
 
   return (
-    <>
+    <div className ="App">
+    <div className='display-bar'> 
       <div className="controls">
         <ControlPanel updateData={updateData} />
         <TopCountriesControl
           topNumber={topNumber}
           setTopNumber={setTopNumber}
         />
-        <button onClick={() => setViewNums(!viewNums)}>
-          Display Mean Amounts
-        </button>
       </div>
+      <button onClick={() => setViewNums(!viewNums)}>
+          {viewNums ? 'Remove Amounts' : 'Display Mean Amounts'}
+      </button> 
+    </div>
+
 
       <div className="viz">
         <VictoryChart
@@ -90,9 +93,7 @@ export default function Viz() {
           )}
         </VictoryChart>
       </div>
-    </>
+    </div>
   );
 }
 
-// labels: { fontSize: 5, padding: 3 }}}
-// labels={({ datum }) => `${datum.y.toFixed(2)}`}
