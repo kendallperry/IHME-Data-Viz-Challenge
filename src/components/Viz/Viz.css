@@ -1,0 +1,44 @@
+#Viz-container {
+    display: flex;
+    flex-direction: row;
+}  
+
+.viz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+} 
+
+.display-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+    #Viz-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .dashboard{
+      margin-top: 20px;
+      flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .dashboard {
+      flex-direction: column;
+    }
+  }
+  
+

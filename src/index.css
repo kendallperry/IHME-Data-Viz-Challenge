@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 2%;
-  padding: 10px;
-  border: 1px solid gray;
+  padding: 10px; 
+  border: 2px solid black;
 }
 
 code {
@@ -27,37 +27,12 @@ button:hover {
   background-color: #39b3c38b ;
 }
 
-.App {
-  display: flex;
-  flex-direction: row;
-} 
 
 .citation {
   border: 1px dotted gray;
   padding: 2%;
   margin: 4%;
 }
-
-.controls {
-  margin: 0.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.display-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.viz {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-} 
 
 #header {
   display: flex;
@@ -73,21 +48,7 @@ button:hover {
   font-style: italic;
 }
 
-@media screen and (max-width: 1200px) {
-  .App {
-    flex-direction: column;
-    align-items: center;
-  }
-  .controls {
-    margin-top: 20px;
-    flex-direction: row;
-  }
-}
-
 @media screen and (max-width: 780px) {
-  .controls {
-    flex-direction: column;
-  }
    #header {
     font-size: 110%;
   }

@@ -1,51 +1,8 @@
 import { VictoryChart, VictoryBar, VictoryTheme, VictoryAxis } from "victory";
-import { useEffect, useState } from "react";
-import TopCountriesControl from "./TopCountriesControl";
-import ControlPanel from "./ControlPanel";
 
-export default function Viz() {
-  const [vizData, setVizData] = useState([]);
-  const [topNumber, setTopNumber] = useState(20);
-  const [viewNums, setViewNums] = useState(false);
-
-  const [data, setData] = useState({});
-  const updateData = (newData) => setData(newData);
-
-  useEffect(() => {
-    if (data.length) {
-      let newVizData = [];
-
-      for (let i = topNumber - 1; i >= 0; i--) {
-        let country = `${data[i].location_name} ${i + 1}`;
-        if (country.length > 18 && topNumber <= 15) {
-          let end = country.slice(-2);
-          country = `${country.slice(0, 16)}..${end}`;
-        }
-        let mean = data[i].mean;
-        let displayObj = { x: country, y: mean };
-        newVizData.push(displayObj);
-      }
-      setVizData(newVizData);
-    }
-  }, [data, topNumber]);
-
-  return (
-    <div className ="App">
-    <div className='display-bar'> 
-      <div className="controls">
-        <ControlPanel updateData={updateData} />
-        <TopCountriesControl
-          topNumber={topNumber}
-          setTopNumber={setTopNumber}
-        />
-      </div>
-      <button onClick={() => setViewNums(!viewNums)}>
-          {viewNums ? 'Remove Amounts' : 'Display Mean Amounts'}
-      </button> 
-    </div>
-
-
-      <div className="viz">
+export default function VizChart({ topNumber, viewNums, vizData }) {
+    return (
+        <div className="viz">
         <VictoryChart
           horizontal
           style={{
@@ -93,7 +50,5 @@ export default function Viz() {
           )}
         </VictoryChart>
       </div>
-    </div>
-  );
+    )
 }
-
