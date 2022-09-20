@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import VizDashboard from "./VizDashboard";
 import VizChart from "./VizChart";
-import "./Viz.css"
+import "./Viz.css";
 
 export default function VizContainer() {
   const [vizData, setVizData] = useState([]);

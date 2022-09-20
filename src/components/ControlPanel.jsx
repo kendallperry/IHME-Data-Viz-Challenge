@@ -1,5 +1,4 @@
 import { useCallback, useState, useEffect } from "react";
-
 import { SexControl, YearControl } from "./controls";
 import * as api from "../api";
 import "./ControlPanel.css";
