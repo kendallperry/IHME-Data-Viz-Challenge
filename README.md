@@ -3,6 +3,8 @@ by Kendall Perry
 
 **“What population is most affected by opioid use disorders?”**
 
+View deployed project [here](https://kendallperry.github.io/IHME-Data-Viz-Challenge/)
+
 For this coding challenge, I chose to visualize data based on the mean amount of deaths per 100,000 people using the [Victory](https://github.com/FormidableLabs/victory) data visualization library.  
 
 After fetching data with “sex" and “year” parameters taken from state, I sorted this data based on the “mean" from highest to lowest.  All of the sorted data is stored in state for easy access across different components.  

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/IHME-Data-Viz-Challenge/static/css/main.6bde10fc.css",
+    "main.js": "/IHME-Data-Viz-Challenge/static/js/main.da12dde9.js",
+    "static/js/787.e4c349b2.chunk.js": "/IHME-Data-Viz-Challenge/static/js/787.e4c349b2.chunk.js",
+    "index.html": "/IHME-Data-Viz-Challenge/index.html",
+    "main.6bde10fc.css.map": "/IHME-Data-Viz-Challenge/static/css/main.6bde10fc.css.map",
+    "main.da12dde9.js.map": "/IHME-Data-Viz-Challenge/static/js/main.da12dde9.js.map",
+    "787.e4c349b2.chunk.js.map": "/IHME-Data-Viz-Challenge/static/js/787.e4c349b2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6bde10fc.css",
+    "static/js/main.da12dde9.js"
+  ]
+}
