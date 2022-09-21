@@ -18,4 +18,4 @@ To take this project one step further, one stretch goal would be to create a “
 
 I enjoyed working on this project, and learned a lot from this data while crafting it's visualization. Thank you for reading and I hope you enjoy!
 
-- Kendall Perry
+Kendall Perry
