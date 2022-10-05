@@ -16,6 +16,7 @@ A user is able to adjust data they’d like to display in the dashboard by inter
 
 To take this project one step further, one stretch goal would be to create a “play” button which would allow a user to animate the progression of years from 1990 to 2017.  This would include a fixed y axis (‘Mean amount of people per 100,000’) to show the populations affected over time.
 
-I enjoyed working on this project, and learned a lot from this data while crafting it's visualization. Thank you for reading and I hope you enjoy!
+I enjoyed working on this project, and learned a lot from this data while crafting it's visualization. 
+Thank you for reading and I hope you enjoy!
 
 Kendall Perry
